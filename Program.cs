@@ -232,22 +232,71 @@ internal class NewBaseType
         */
         #endregion
         #region if-else
-/*
-        int time = DateTime.Now.Hour;
 
-        if (time >= 6 && time > 11)
-            Console.WriteLine("Günaydın");
+        /*
+                        int time = DateTime.Now.Hour;
 
-        else if (time <= 18)
-            Console.WriteLine("iyi günler");
-        else
-            Console.WriteLine("iyi geceler");
+                        if (time >= 6 && time > 11)
+                            Console.WriteLine("Günaydın");
 
-        string sonuc = time <= 18 ? "İyi günler":"İyi geceler";
-        sonuc = time >= 6 && time < 11 ? "Günaydın" : time <= 18 ? "İyi günler" : "İyi geceler";
-        Console.WriteLine(sonuc);
-        */
+                        else if (time <= 18)
+                            Console.WriteLine("iyi günler");
+                        else
+                            Console.WriteLine("iyi geceler");
+
+                        string sonuc = time <= 18 ? "İyi günler":"İyi geceler";
+                        sonuc = time >= 6 && time < 11 ? "Günaydın" : time <= 18 ? "İyi günler" : "İyi geceler";
+                        Console.WriteLine(sonuc);
+                        */
         #endregion
+        #region Switch-case
+
+        int month = DateTime.Now.Month;
+
+        switch (month)
+        {
+            case 1:
+                Console.WriteLine("Ocak Ayındasınız");
+                break;
+            case 2:
+                Console.WriteLine("Şubat Ayındasınız");
+                break;
+            case 3:
+                Console.WriteLine("Mart Ayındasınız");
+                break;
+
+
+            default:
+                break;
+        }
+        switch (month)
+        {
+            case 12:
+            case 1:
+            case 2:
+                Console.WriteLine("Kış ayındasınız");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                Console.WriteLine("ilkbahar ayındasınız");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                Console.WriteLine("Yaz ayındasınız");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                Console.WriteLine("Sonbahar ayındasınız");
+                break;
+            default:
+                break;
+        }
+
+        #endregion
+
 
     }
     public static void ParseMethod()
