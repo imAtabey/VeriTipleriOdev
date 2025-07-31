@@ -137,6 +137,7 @@ internal class NewBaseType
      */
         #endregion
         #region TipDonusumleri
+        /*
         //implicit conversation(bilinçsiz dönüşüm)
         byte a = 5;
         sbyte b = 30;
@@ -187,7 +188,7 @@ internal class NewBaseType
 
         // Parse
         ParseMethod();
-
+*/
         #endregion
     }
     public static void ParseMethod()
