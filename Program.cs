@@ -68,6 +68,8 @@ internal class NewBaseType
         string hour = DateTime.Now.ToString("HH:mm");
         Console.WriteLine(hour);
 
+        //Github içine yüklendi
+
     }
 }
 
