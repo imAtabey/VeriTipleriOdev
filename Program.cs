@@ -191,45 +191,62 @@ internal class NewBaseType
 */
         #endregion
         #region HataYonetimi
+        /*
+                try
+                {
+                    Console.WriteLine("Bir sayı giriniz");
+                    int sayi = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Girilen sayı:" + sayi);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Hata:" + ex.Message.ToString());
+                }
+                finally
+                {
+                    Console.WriteLine("İşlem tamamlandı");
+                }
+
+                try
+                {
+                    //int a = int.Parse(null);
+                    //int a = int.Parse("Test");
+                    int a = int.Parse("-2000000000000000000000");
+                }
+                catch (ArgumentNullException ex)
+                {
+
+                    Console.WriteLine("Boş değer girdiniz");
+                    Console.WriteLine(ex);
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("Format tipi uygun değil");
+                    Console.WriteLine(ex);
+                }
+                catch (OverflowException ex)
+                {
+                    Console.WriteLine("Değer aralık dışında");
+                    Console.WriteLine(ex);
+                }
+        */
+        #endregion
+        #region if-else
 /*
-        try
-        {
-            Console.WriteLine("Bir sayı giriniz");
-            int sayi = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Girilen sayı:" + sayi);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Hata:" + ex.Message.ToString());
-        }
-        finally
-        {
-            Console.WriteLine("İşlem tamamlandı");
-        }
+        int time = DateTime.Now.Hour;
 
-        try
-        {
-            //int a = int.Parse(null);
-            //int a = int.Parse("Test");
-            int a = int.Parse("-2000000000000000000000");
-        }
-        catch (ArgumentNullException ex)
-        {
+        if (time >= 6 && time > 11)
+            Console.WriteLine("Günaydın");
 
-            Console.WriteLine("Boş değer girdiniz");
-            Console.WriteLine(ex);
-        }
-        catch (FormatException ex)
-        {
-            Console.WriteLine("Format tipi uygun değil");
-            Console.WriteLine(ex);
-        }
-        catch (OverflowException ex)
-        {
-            Console.WriteLine("Değer aralık dışında");
-            Console.WriteLine(ex);
-        }
-*/
+        else if (time <= 18)
+            Console.WriteLine("iyi günler");
+        else
+            Console.WriteLine("iyi geceler");
+
+        string sonuc = time <= 18 ? "İyi günler":"İyi geceler";
+        sonuc = time >= 6 && time < 11 ? "Günaydın" : time <= 18 ? "İyi günler" : "İyi geceler";
+        Console.WriteLine(sonuc);
+        */
         #endregion
 
     }
