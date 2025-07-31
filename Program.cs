@@ -191,7 +191,7 @@ internal class NewBaseType
 */
         #endregion
         #region HataYonetimi
-
+/*
         try
         {
             Console.WriteLine("Bir sayı giriniz");
@@ -229,7 +229,7 @@ internal class NewBaseType
             Console.WriteLine("Değer aralık dışında");
             Console.WriteLine(ex);
         }
-
+*/
         #endregion
 
     }
