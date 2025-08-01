@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Degiskenler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa8cbcbcd2e8c5d0ce307251c7404739a67f46fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13a53bedd5c344fed2cec8672dc6eb622e6cbd5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Degiskenler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Degiskenler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -297,49 +297,80 @@ internal class NewBaseType
         */
         #endregion
         #region Donguler-For
+        /*
+                //ekrandan girilen sayıya kadar olan tek sayıları yazdır.
+                Console.WriteLine("Lütfen bir sayı giriniz:");
+                int sayac = int.Parse(Console.ReadLine());
+                for (int i = 0; i <= sayac; i++)
+                {
+                    if (i % 2 == 1)
+                        Console.WriteLine(i);
+
+                }
+
+                // 1 ile 1000 arasında ki tek ve çift sayıların toplamını ekrana yazdır
+                int tekToplam = 0;
+                int ciftToplam = 0;
+
+                for (int i = 0; i <= 1000; i++)
+                {
+                    if (i % 2 == 1)
+                        tekToplam += i;
+                    else
+                        ciftToplam += i;
+                }
+                Console.WriteLine("Tek Toplam :" + tekToplam);
+                Console.WriteLine("Çift Toplam :" + ciftToplam);
+
+                //Break, continue : Break-> ilgili koşulda döngüyü sonlandırır(döngüden çıkar). Continue ->ilgili koşulda döngü atlanır(ilgili değer döngüde atlanır ve yeni değer devam eder).
+                for (int i = 1; i < 10; i++)
+                {
+                    if (i == 4)
+                        break;
+                    Console.WriteLine(i);
+                }
+
+                for (int i = 1; i < 10; i++)
+                {
+                    if (i == 4)
+                        continue;
+                    Console.WriteLine(i);
+                }   
+
+                //for(;;) -> sonsuz döngüye girer
+        */
+        #endregion
+        #region Donguler-While
 /*
-        //ekrandan girilen sayıya kadar olan tek sayıları yazdır.
+        //1'den balayarak consele'dan girilen sayıya kadar (sayı dahil) ortalama hesaplayıp console 'a yazdıran program
         Console.WriteLine("Lütfen bir sayı giriniz:");
-        int sayac = int.Parse(Console.ReadLine());
-        for (int i = 0; i <= sayac; i++)
+        int sayi = int.Parse(Console.ReadLine());
+        int sayac = 1;
+        int toplam = 0;
+        while (sayac <= sayi)
         {
-            if (i % 2 == 1)
-                Console.WriteLine(i);
+            toplam += sayac;
+            sayac++;
+        }
+        Console.WriteLine(toplam / sayi);
 
+        //a'dan z'ye kadar olan tüm harfleri ekrana yaz
+        char ch = 'a';
+        while (ch <= 'z')
+        {
+            Console.WriteLine(ch);
+            ch++;
         }
 
-        // 1 ile 1000 arasında ki tek ve çift sayıların toplamını ekrana yazdır
-        int tekToplam = 0;
-        int ciftToplam = 0;
-
-        for (int i = 0; i <= 1000; i++)
+        //foreach diziler içinde ki döngüleri yönetiriz
+        string[] arabalar = { "BMW", "Ford", "Audi", "Mercedes" };
+        foreach (var araba in arabalar)
         {
-            if (i % 2 == 1)
-                tekToplam += i;
-            else
-                ciftToplam += i;
+            Console.WriteLine(araba);
         }
-        Console.WriteLine("Tek Toplam :" + tekToplam);
-        Console.WriteLine("Çift Toplam :" + ciftToplam);
-
-        //Break, continue : Break-> ilgili koşulda döngüyü sonlandırır(döngüden çıkar). Continue ->ilgili koşulda döngü atlanır(ilgili değer döngüde atlanır ve yeni değer devam eder).
-        for (int i = 1; i < 10; i++)
-        {
-            if (i == 4)
-                break;
-            Console.WriteLine(i);
-        }
-
-        for (int i = 1; i < 10; i++)
-        {
-            if (i == 4)
-                continue;
-            Console.WriteLine(i);
-        }   
-        
-        //for(;;) -> sonsuz döngüye girer
 */
         #endregion
+
 
     }
     public static void ParseMethod()
