@@ -250,53 +250,96 @@ internal class NewBaseType
                         */
         #endregion
         #region Switch-case
+        /*
+                int month = DateTime.Now.Month;
 
-        int month = DateTime.Now.Month;
-
-        switch (month)
-        {
-            case 1:
-                Console.WriteLine("Ocak Ayındasınız");
-                break;
-            case 2:
-                Console.WriteLine("Şubat Ayındasınız");
-                break;
-            case 3:
-                Console.WriteLine("Mart Ayındasınız");
-                break;
+                switch (month)
+                {
+                    case 1:
+                        Console.WriteLine("Ocak Ayındasınız");
+                        break;
+                    case 2:
+                        Console.WriteLine("Şubat Ayındasınız");
+                        break;
+                    case 3:
+                        Console.WriteLine("Mart Ayındasınız");
+                        break;
 
 
-            default:
-                break;
-        }
-        switch (month)
-        {
-            case 12:
-            case 1:
-            case 2:
-                Console.WriteLine("Kış ayındasınız");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                Console.WriteLine("ilkbahar ayındasınız");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                Console.WriteLine("Yaz ayındasınız");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                Console.WriteLine("Sonbahar ayındasınız");
-                break;
-            default:
-                break;
-        }
-
+                    default:
+                        break;
+                }
+                switch (month)
+                {
+                    case 12:
+                    case 1:
+                    case 2:
+                        Console.WriteLine("Kış ayındasınız");
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        Console.WriteLine("ilkbahar ayındasınız");
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:
+                        Console.WriteLine("Yaz ayındasınız");
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:
+                        Console.WriteLine("Sonbahar ayındasınız");
+                        break;
+                    default:
+                        break;
+                }
+        */
         #endregion
+        #region Donguler-For
+/*
+        //ekrandan girilen sayıya kadar olan tek sayıları yazdır.
+        Console.WriteLine("Lütfen bir sayı giriniz:");
+        int sayac = int.Parse(Console.ReadLine());
+        for (int i = 0; i <= sayac; i++)
+        {
+            if (i % 2 == 1)
+                Console.WriteLine(i);
 
+        }
+
+        // 1 ile 1000 arasında ki tek ve çift sayıların toplamını ekrana yazdır
+        int tekToplam = 0;
+        int ciftToplam = 0;
+
+        for (int i = 0; i <= 1000; i++)
+        {
+            if (i % 2 == 1)
+                tekToplam += i;
+            else
+                ciftToplam += i;
+        }
+        Console.WriteLine("Tek Toplam :" + tekToplam);
+        Console.WriteLine("Çift Toplam :" + ciftToplam);
+
+        //Break, continue : Break-> ilgili koşulda döngüyü sonlandırır(döngüden çıkar). Continue ->ilgili koşulda döngü atlanır(ilgili değer döngüde atlanır ve yeni değer devam eder).
+        for (int i = 1; i < 10; i++)
+        {
+            if (i == 4)
+                break;
+            Console.WriteLine(i);
+        }
+
+        for (int i = 1; i < 10; i++)
+        {
+            if (i == 4)
+                continue;
+            Console.WriteLine(i);
+        }   
+        
+        //for(;;) -> sonsuz döngüye girer
+*/
+        #endregion
 
     }
     public static void ParseMethod()

@@ -1,0 +1,15 @@
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\bin\Debug\net9.0\Degiskenler.exe
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\bin\Debug\net9.0\Degiskenler.deps.json
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\bin\Debug\net9.0\Degiskenler.runtimeconfig.json
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\bin\Debug\net9.0\Degiskenler.dll
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\bin\Debug\net9.0\Degiskenler.pdb
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.AssemblyInfoInputs.cache
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.AssemblyInfo.cs
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.csproj.CoreCompileInputs.cache
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.sourcelink.json
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.dll
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\refint\Degiskenler.dll
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.pdb
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\Degiskenler.genruntimeconfig.cache
+C:\Users\husey\Desktop\PatikaDev\Degiskenler\obj\Debug\net9.0\ref\Degiskenler.dll
