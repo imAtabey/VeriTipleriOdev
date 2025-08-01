@@ -371,43 +371,85 @@ internal class NewBaseType
         */
         #endregion
         #region Diziler-Giris
- /*      
-        //Aynı tipteki değişkenleri beraber saklamak için kullandığımız yapılardır
-        //diziler 0'dan başlar yani ilk index 0 olur. 
+        /*      
+               //Aynı tipteki değişkenleri beraber saklamak için kullandığımız yapılardır
+               //diziler 0'dan başlar yani ilk index 0 olur. 
 
-        //-> Dizi Tanımlama
-        string[] renkler = new string[5];
-        string[] hayvanlar = { "Kedi", "Köpek", "Kuş", "Maymun" };
-        int[] dizi;
-        dizi = new int[5];
+               //-> Dizi Tanımlama
+               string[] renkler = new string[5];
+               string[] hayvanlar = { "Kedi", "Köpek", "Kuş", "Maymun" };
+               int[] dizi;
+               dizi = new int[5];
 
-        //-> Dizilere Değer Atama ve Erişim
-        renkler[0] = "Mavi";
-        dizi[3] = 10;
+               //-> Dizilere Değer Atama ve Erişim
+               renkler[0] = "Mavi";
+               dizi[3] = 10;
 
-        Console.WriteLine(hayvanlar[0]);
-        Console.WriteLine(dizi[3]);
-        Console.WriteLine(renkler[0]);
+               Console.WriteLine(hayvanlar[0]);
+               Console.WriteLine(dizi[3]);
+               Console.WriteLine(renkler[0]);
 
-        //-> Döngülerle dizi kullanımı
-        //Klavyeden girilen n tane sayının ortalamasını hesaplayan program
-        Console.WriteLine("Lütfen dizinin eleman sayısını giriniz :");
-        int diziUzunlugu = int.Parse(Console.ReadLine());
-        int[] sayiDizisi = new int[diziUzunlugu];
+               //-> Döngülerle dizi kullanımı
+               //Klavyeden girilen n tane sayının ortalamasını hesaplayan program
+               Console.WriteLine("Lütfen dizinin eleman sayısını giriniz :");
+               int diziUzunlugu = int.Parse(Console.ReadLine());
+               int[] sayiDizisi = new int[diziUzunlugu];
 
-        for (int i = 0; i < diziUzunlugu; i++)
-        {
-            Console.Write("Lütfen {0}. sayıyı giriniz : ", i + 1);
-            sayiDizisi[i] = int.Parse(Console.ReadLine());
-        }
-        int toplam = 0;
-        foreach (var sayi in sayiDizisi)
-        {
-            toplam += sayi;
-        }
-        Console.WriteLine("Ortalama :" + (toplam / diziUzunlugu));
-        */
+               for (int i = 0; i < diziUzunlugu; i++)
+               {
+                   Console.Write("Lütfen {0}. sayıyı giriniz : ", i + 1);
+                   sayiDizisi[i] = int.Parse(Console.ReadLine());
+               }
+               int toplam = 0;
+               foreach (var sayi in sayiDizisi)
+               {
+                   toplam += sayi;
+               }
+               Console.WriteLine("Ortalama :" + (toplam / diziUzunlugu));
+               */
         #endregion
+        #region Diziler-Array Sınıfı Metotları
+/*
+        //Diziler Array Sınıfından Türerler. Bu yüzden bu sınıfın metotlarını kullanabilir.
+
+        //-> sort
+        int[] sayiDizisi = { 23, 12, 4, 86, 72, 3, 11, 17 };
+        Console.WriteLine("*** Sırasız Dizi ***");
+        foreach (var sayi in sayiDizisi)
+            Console.WriteLine(sayi);
+        Console.WriteLine("*** Sıralı Dizi ***");
+        Array.Sort(sayiDizisi);
+        foreach (var sayi in sayiDizisi)
+            Console.WriteLine(sayi);
+
+        //-> Clear ilgili dizide verilen indexten istenilen uzunluğu siler
+        Console.WriteLine("*** Clear ***");
+        Array.Clear(sayiDizisi, 2, 2);
+
+        foreach (var sayi in sayiDizisi)
+            Console.WriteLine(sayiDizisi);
+
+        //-> Reverse ilgili diziyi tersten yazar
+        Console.WriteLine("*** Reverse ***");
+        Array.Reverse(sayiDizisi);
+
+        foreach (var sayi in sayiDizisi)
+            Console.WriteLine(sayi);
+
+        //-> IndexOf Dizide verilen elaman varsa index numarasını döner
+        Console.WriteLine("*** IndexOf ***");
+        Console.WriteLine(Array.IndexOf(sayiDizisi, 23));
+
+        // -> Resize İlgili diziyi yeniden boyutlandırır
+        Console.WriteLine("*** Resize ***");
+        Array.Resize<int>(ref sayiDizisi, 9);
+        sayiDizisi[8] = 99;
+
+        foreach (var sayi in sayiDizisi)
+            Console.WriteLine(sayi);
+*/
+        #endregion
+
 
     }
     public static void ParseMethod()
