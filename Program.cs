@@ -478,31 +478,66 @@ internal class NewBaseType
 */
         #endregion
         #region Metot Overloading
-/*
-        //Out Parametreler
-        string sayi = "999";
+        /*
+                //Out Parametreler
+                string sayi = "999";
 
-        bool sonuc = int.TryParse(sayi, out int outSayi);
+                bool sonuc = int.TryParse(sayi, out int outSayi);
+                if (sonuc)
+                {
+                    Console.WriteLine("Başarılı");
+                    Console.WriteLine(outSayi);
+                }
+                else
+                {
+                    Console.WriteLine("Başarısız");
+                }
+
+                Metotlar m = new Metotlar();
+                m.Toplam(2, 3, out int toplamSonuc);
+                Console.WriteLine(toplamSonuc);
+
+                //Metot Overloading (Aşırı Yükleme)
+                int ifade = 999;
+                m.EkranaYazdir(ifade.ToString());
+                m.EkranaYazdir(ifade);
+                m.EkranaYazdir("Hüseyin", "ÜTEBAY");
+                */
+        #endregion
+        #region Metot-Recursive and Extension
+        /*
+        //-> Rekürfis Fonksiyonlar: Öz Yineleme (kendini tekrar çağran metotlar)
+        //3^4 hesaplayan metot
+        int result = 1;
+        for (int i = 0; i < 5; i++)
+        {
+            result = result * 3;
+        }
+        Console.WriteLine(result);
+
+        Islemler islemler = new();
+        Console.WriteLine(islemler.Expo(3, 4));
+
+        //-> Extension Metot: statik bir metot ve parametresi this ile işaretlenmeli
+        string ifade = "Hüseyin ÜTEBAY";
+        bool sonuc = ifade.CheckSpaces();
+        Console.WriteLine(sonuc);
+
         if (sonuc)
-        {
-            Console.WriteLine("Başarılı");
-            Console.WriteLine(outSayi);
-        }
-        else
-        {
-            Console.WriteLine("Başarısız");
-        }
+            Console.WriteLine(ifade.RemoveWhiteSpaces());
 
-        Metotlar m = new Metotlar();
-        m.Toplam(2, 3, out int toplamSonuc);
-        Console.WriteLine(toplamSonuc);
+        Console.WriteLine(ifade.MakeUpperCase());
+        Console.WriteLine(ifade.MakeLowerCase());
 
-        //Metot Overloading (Aşırı Yükleme)
-        int ifade = 999;
-        m.EkranaYazdir(ifade.ToString());
-        m.EkranaYazdir(ifade);
-        m.EkranaYazdir("Hüseyin", "ÜTEBAY");
-        */
+        int[] dizi = { 9, 3, 6, 2, 1, 5, 0 };
+        dizi.SortArray();
+        dizi.EkranaYazdir();
+
+        int sayi = 5;
+        Console.WriteLine(sayi.IsEven());
+
+        Console.WriteLine(ifade.GetFirstCharacter());
+*/
         #endregion
 
     }
@@ -526,6 +561,7 @@ internal class NewBaseType
 }
 
 class Metotlar
+
 {
     public void EkranaYazdir(string veri)
     {
@@ -535,9 +571,9 @@ class Metotlar
     {
         Console.WriteLine(veri);
     }
-     public void EkranaYazdir(string veri1,string veri2)
+    public void EkranaYazdir(string veri1, string veri2)
     {
-        Console.WriteLine(veri1+" "+veri2);
+        Console.WriteLine(veri1 + " " + veri2);
     }
     public int ArttırveTopla(ref int deger1, ref int deger2)
     {
@@ -549,6 +585,55 @@ class Metotlar
     public void Toplam(int a, int b, out int toplam)
     {
         toplam = a + b;
+    }
+}
+public class Islemler
+{
+    public int Expo(int sayi, int üs)
+    {
+        if (üs < 2)
+            return sayi;
+        return Expo(sayi, üs - 1) * sayi;
+    }
+}
+public static class Extension
+{
+    public static bool CheckSpaces(this string param)
+    {
+        return param.Contains(" ");
+    }
+    public static string RemoveWhiteSpaces(this string param)
+    {
+        string[] dizi = param.Split(" ");
+        return string.Join("", dizi);
+    }
+    public static string MakeUpperCase(this string param)
+    {
+        return param.ToUpper();
+    }
+    public static string MakeLowerCase(this string param)
+    {
+        return param.ToLower();
+    }
+    public static int[] SortArray(this int[] param)
+    {
+        Array.Sort(param);
+        return param;
+    }
+    public static void EkranaYazdir(this int[] param)
+    {
+        foreach (var sayi in param)
+        {
+            Console.WriteLine(sayi);
+        }
+    }
+    public static bool IsEven(this int param)
+    {
+        return param % 2 == 0;
+    }
+    public static string GetFirstCharacter(this string param)
+    {
+        return param.Substring(0,1);
     }
 }
 
