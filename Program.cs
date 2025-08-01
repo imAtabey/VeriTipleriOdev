@@ -409,48 +409,78 @@ internal class NewBaseType
                */
         #endregion
         #region Diziler-Array Sınıfı Metotları
-/*
-        //Diziler Array Sınıfından Türerler. Bu yüzden bu sınıfın metotlarını kullanabilir.
+        /*
+                //Diziler Array Sınıfından Türerler. Bu yüzden bu sınıfın metotlarını kullanabilir.
 
-        //-> sort
-        int[] sayiDizisi = { 23, 12, 4, 86, 72, 3, 11, 17 };
-        Console.WriteLine("*** Sırasız Dizi ***");
-        foreach (var sayi in sayiDizisi)
-            Console.WriteLine(sayi);
-        Console.WriteLine("*** Sıralı Dizi ***");
-        Array.Sort(sayiDizisi);
-        foreach (var sayi in sayiDizisi)
-            Console.WriteLine(sayi);
+                //-> sort
+                int[] sayiDizisi = { 23, 12, 4, 86, 72, 3, 11, 17 };
+                Console.WriteLine("*** Sırasız Dizi ***");
+                foreach (var sayi in sayiDizisi)
+                    Console.WriteLine(sayi);
+                Console.WriteLine("*** Sıralı Dizi ***");
+                Array.Sort(sayiDizisi);
+                foreach (var sayi in sayiDizisi)
+                    Console.WriteLine(sayi);
 
-        //-> Clear ilgili dizide verilen indexten istenilen uzunluğu siler
-        Console.WriteLine("*** Clear ***");
-        Array.Clear(sayiDizisi, 2, 2);
+                //-> Clear ilgili dizide verilen indexten istenilen uzunluğu siler
+                Console.WriteLine("*** Clear ***");
+                Array.Clear(sayiDizisi, 2, 2);
 
-        foreach (var sayi in sayiDizisi)
-            Console.WriteLine(sayiDizisi);
+                foreach (var sayi in sayiDizisi)
+                    Console.WriteLine(sayiDizisi);
 
-        //-> Reverse ilgili diziyi tersten yazar
-        Console.WriteLine("*** Reverse ***");
-        Array.Reverse(sayiDizisi);
+                //-> Reverse ilgili diziyi tersten yazar
+                Console.WriteLine("*** Reverse ***");
+                Array.Reverse(sayiDizisi);
 
-        foreach (var sayi in sayiDizisi)
-            Console.WriteLine(sayi);
+                foreach (var sayi in sayiDizisi)
+                    Console.WriteLine(sayi);
 
-        //-> IndexOf Dizide verilen elaman varsa index numarasını döner
-        Console.WriteLine("*** IndexOf ***");
-        Console.WriteLine(Array.IndexOf(sayiDizisi, 23));
+                //-> IndexOf Dizide verilen elaman varsa index numarasını döner
+                Console.WriteLine("*** IndexOf ***");
+                Console.WriteLine(Array.IndexOf(sayiDizisi, 23));
 
-        // -> Resize İlgili diziyi yeniden boyutlandırır
-        Console.WriteLine("*** Resize ***");
-        Array.Resize<int>(ref sayiDizisi, 9);
-        sayiDizisi[8] = 99;
+                // -> Resize İlgili diziyi yeniden boyutlandırır
+                Console.WriteLine("*** Resize ***");
+                Array.Resize<int>(ref sayiDizisi, 9);
+                sayiDizisi[8] = 99;
 
-        foreach (var sayi in sayiDizisi)
-            Console.WriteLine(sayi);
-*/
+                foreach (var sayi in sayiDizisi)
+                    Console.WriteLine(sayi);
+        */
+        #endregion
+        #region Metot Tanımlama
+        //Metotlar fonksiyonlardır
+        //Metotlar Class içinde tanımlanmalıdır.
+        //Başka bir Class'dan metot'a ulaşılacaksa o metot'un intance'ı ile ulaşılabilir.
+
+        //-> Tanımlama Syntax'ı
+        // erisimbelirteci geridönüştipi metotadi (parametrelistesi/arguman)
+        //{
+        //   Komutlar;
+        //   return; Geri dönüş değeri bildirir.
+        //}
+
+        int a = 2;
+        int b = 3;
+        Console.WriteLine(a + b);
+
+        int sonuc = Topla(a, b);
+        Console.WriteLine(sonuc);
+
+        Metotlar m = new Metotlar(); //İlgili sınıfın intance oluşturup metot çağrıldı.
+        m.EkranaYazdir(sonuc.ToString());
+
+        int sonuc2 = m.ArttırveTopla(ref a, ref b); //Ref ile yapıldığı için a=deger1++ ile b=deger2++ olarak güncellendi.
+        m.EkranaYazdir(sonuc2.ToString());
+        
+
         #endregion
 
-
+    }
+    public static int Topla( int deger1,  int deger2)
+    {
+        return deger1 + deger2;
     }
     public static void ParseMethod()
     {
@@ -464,6 +494,21 @@ internal class NewBaseType
 
         double1 = double.Parse(metin2);
         Console.WriteLine("double1" + double1);
+    }
+}
+
+class Metotlar
+{
+    public void EkranaYazdir(string veri)
+    {
+        Console.WriteLine(veri);
+    }
+
+    public int ArttırveTopla(ref int deger1,ref int deger2)
+    {
+        deger1 += 1;
+        deger2 += 1;
+        return deger1 + deger2;
     }
 }
 
