@@ -450,6 +450,7 @@ internal class NewBaseType
         */
         #endregion
         #region Metot Tanımlama
+        /*
         //Metotlar fonksiyonlardır
         //Metotlar Class içinde tanımlanmalıdır.
         //Başka bir Class'dan metot'a ulaşılacaksa o metot'un intance'ı ile ulaşılabilir.
@@ -474,7 +475,34 @@ internal class NewBaseType
         int sonuc2 = m.ArttırveTopla(ref a, ref b); //Ref ile yapıldığı için a=deger1++ ile b=deger2++ olarak güncellendi.
         m.EkranaYazdir(sonuc2.ToString());
         
+*/
+        #endregion
+        #region Metot Overloading
+/*
+        //Out Parametreler
+        string sayi = "999";
 
+        bool sonuc = int.TryParse(sayi, out int outSayi);
+        if (sonuc)
+        {
+            Console.WriteLine("Başarılı");
+            Console.WriteLine(outSayi);
+        }
+        else
+        {
+            Console.WriteLine("Başarısız");
+        }
+
+        Metotlar m = new Metotlar();
+        m.Toplam(2, 3, out int toplamSonuc);
+        Console.WriteLine(toplamSonuc);
+
+        //Metot Overloading (Aşırı Yükleme)
+        int ifade = 999;
+        m.EkranaYazdir(ifade.ToString());
+        m.EkranaYazdir(ifade);
+        m.EkranaYazdir("Hüseyin", "ÜTEBAY");
+        */
         #endregion
 
     }
@@ -503,12 +531,24 @@ class Metotlar
     {
         Console.WriteLine(veri);
     }
-
-    public int ArttırveTopla(ref int deger1,ref int deger2)
+    public void EkranaYazdir(int veri)
+    {
+        Console.WriteLine(veri);
+    }
+     public void EkranaYazdir(string veri1,string veri2)
+    {
+        Console.WriteLine(veri1+" "+veri2);
+    }
+    public int ArttırveTopla(ref int deger1, ref int deger2)
     {
         deger1 += 1;
         deger2 += 1;
         return deger1 + deger2;
+    }
+
+    public void Toplam(int a, int b, out int toplam)
+    {
+        toplam = a + b;
     }
 }
 
